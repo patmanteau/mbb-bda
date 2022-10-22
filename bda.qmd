@@ -3,6 +3,7 @@ title: "bda"
 ---
 
 ```{r}
+#| echo: false
 library(tidyverse)
 library(readxl)
 ```
@@ -31,7 +32,8 @@ mapping <- tibble(
 
 
 ```{r}
-brd_alles <- deutschland %>%
+joined <- deutschland %>%
   full_join(mapping, by = c("Bundesland" = "Bundesland_lang")) %>%
   full_join(fläche, by = c("Bundesland_kurz" = "Bundesland"))
+joined
 ```
