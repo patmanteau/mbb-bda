@@ -10,14 +10,17 @@ library(readxl)
 ```{r}
 deutschland <- read_excel("Data_deutschland.xlsx")
 fläche <-read_excel("Data_flaeche.xlsx")
+```
+
+```{r}
 mapping <- tibble(
-  # Bundesland_lang = unique(deutschland$Bundesland),
-  Bundesland_lang = c(
-    "Schleswig-Holstein", "Hamburg", "Niedersachsen", "Bremen",
-    "Nordrhein-Westfalen", "Hessen", "Rheinland-Pfalz", "Baden-Württemberg",
-    "Bayern", "Saarland", "Berlin", "Brandenburg",
-    "Mecklenburg-Vorpommern", "Sachsen", "Sachsen-Anhalt", "Thüringen",
-    "Deutschland"),
+  Bundesland_lang = unique(deutschland$Bundesland),
+  # Bundesland_lang = c(
+  #   "Schleswig-Holstein", "Hamburg", "Niedersachsen", "Bremen",
+  #   "Nordrhein-Westfalen", "Hessen", "Rheinland-Pfalz", "Baden-Württemberg",
+  #   "Bayern", "Saarland", "Berlin", "Brandenburg",
+  #   "Mecklenburg-Vorpommern", "Sachsen", "Sachsen-Anhalt", "Thüringen",
+  #   "Deutschland"),
   Bundesland_kurz = c(
     "SH", "HH", "NI", "BH",
     "NW", "HE", "RP", "BW",
